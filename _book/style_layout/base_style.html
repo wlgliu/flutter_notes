@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1.基本样式 · GitBook</title>
+        <title>基本样式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -121,7 +121,7 @@
                 <a href="base_style.html">
             
                     
-                    1.基本样式
+                    基本样式
             
                 </a>
             
@@ -139,7 +139,7 @@
                 <a href="../component/first.html">
             
                     
-                    组件
+                    常用 Widget
             
                 </a>
             
@@ -209,7 +209,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1.基本样式</a>
+        <a href=".." >基本样式</a>
     </h1>
 </div>
 
@@ -226,44 +226,54 @@
                                 
                                 <h3 id="&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x6700;&#x5C0F;&#x5BBD;&#x9AD8;">&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x6700;&#x5C0F;&#x5BBD;&#x9AD8;</h3>
 <pre><code class="lang-dart">Container(
-    width: <span class="hljs-number">100</span>,
-    height: <span class="hljs-number">20</span>,
-    constraints: BoxConstraints(
-        minWidth: <span class="hljs-number">180</span>,  <span class="hljs-comment">// &#x6700;&#x5927;&#x9AD8;&#x5EA6;</span>
-        minHeight: <span class="hljs-number">50</span>,  <span class="hljs-comment">// &#x6700;&#x5C0F;&#x9AD8;&#x5EA6;</span>
-    ),
-    child: Text(<span class="hljs-string">&apos;Container&#x8BBE;&#x7F6E;&#x6700;&#x5C0F;&#x5BBD;&#x9AD8;&apos;</span>),
-)
+  width: <span class="hljs-number">100</span>,
+  height: <span class="hljs-number">100</span>,
+  constraints: BoxConstraints(
+    maxWidth: <span class="hljs-number">50</span>,
+    minHeight: <span class="hljs-number">50</span>,
+  ),
+  color: Colors.blue,
+),
 </code></pre>
 <h3 id="&#x8BBE;&#x7F6E;&#x5706;&#x89D2;">&#x8BBE;&#x7F6E;&#x5706;&#x89D2;</h3>
 <ul>
-<li>&#x5355;&#x4E2A;&#x5706;&#x89D2;<pre><code class="lang-dart">borderRadius: BorderRadius.only(topLeft: Radius.circular(<span class="hljs-number">5</span>), 
-  bottomRight: Radius.circular(<span class="hljs-number">20</span>)),
+<li>&#x5355;&#x4E2A;&#x5706;&#x89D2;<pre><code class="lang-dart">borderRadius: BorderRadius.only(topLeft: Radius.circular(<span class="hljs-number">5</span>)),
 </code></pre>
 </li>
-<li>&#x5168;&#x90E8;&#x5706;&#x89D2;<pre><code class="lang-dart">borderRadius: BorderRadius.only(topLeft: Radius.circular(<span class="hljs-number">5</span>), 
-  bottomRight: Radius.circular(<span class="hljs-number">20</span>)),
+<li>&#x5168;&#x90E8;&#x5706;&#x89D2;<pre><code class="lang-dart">borderRadius: BorderRadius.all(Radius.circular(<span class="hljs-number">5</span>))
 </code></pre>
 </li>
 </ul>
 <h3 id="&#x8BBE;&#x7F6E;&#x8FB9;&#x6846;">&#x8BBE;&#x7F6E;&#x8FB9;&#x6846;</h3>
 <ul>
-<li>&#x5355;&#x4E2A;&#x8FB9;&#x6846;<pre><code class="lang-dart">border: Border(top: BorderSide(color: Colors.red, width: <span class="hljs-number">2</span>))
+<li>&#x5355;&#x4E2A;&#x8FB9;&#x6846;<pre><code class="lang-dart">border: Border(top: BorderSide(width: <span class="hljs-number">1</span>, color: Colors.blue[<span class="hljs-number">600</span>],))
 </code></pre>
 </li>
-<li>&#x5168;&#x90E8;&#x8FB9;&#x6846;<pre><code class="lang-dart">border: Border.all(color: Colors.black, width: <span class="hljs-number">2</span>)
+<li>&#x5168;&#x90E8;&#x8FB9;&#x6846;<pre><code class="lang-dart">border: Border.all(width: <span class="hljs-number">1</span>, color: Colors.blue[<span class="hljs-number">600</span>],),
 </code></pre>
 </li>
 </ul>
 <h3 id="&#x8FC7;&#x5EA6;&#x80CC;&#x666F;&#x989C;&#x8272;">&#x8FC7;&#x5EA6;&#x80CC;&#x666F;&#x989C;&#x8272;</h3>
-<pre><code class="lang-dart">decoration: BoxDecoration(
-    gradient: LinearGradient(
-        begin: Alignment.bottomCenter,
-        end: Alignment.topCenter,
-        colors: [Color(<span class="hljs-number">0xffFA9804</span>), Color(<span class="hljs-number">0xffFAC800</span>)],
-    ),
-),
+<ul>
+<li>&#x7EBF;&#x6027;&#x6E10;&#x53D8;<pre><code class="lang-dart">gradient: LinearGradient( <span class="hljs-comment">// &#x7EBF;&#x6027;&#x6E10;&#x53D8;</span>
+  begin: Alignment.topCenter,
+  end: Alignment.bottomCenter,
+  colors: [
+      Colors.blue[<span class="hljs-number">500</span>],
+      Colors.blue[<span class="hljs-number">300</span>],
+      Colors.blue[<span class="hljs-number">100</span>],
+]),
 </code></pre>
+</li>
+<li>&#x5F84;&#x5411;&#x6E10;&#x53D8;<pre><code class="lang-dart">gradient: RadialGradient( <span class="hljs-comment">// &#x5F84;&#x5411;&#x6E10;&#x53D8;</span>
+  colors: [
+      Colors.blue[<span class="hljs-number">500</span>],
+      Colors.blue[<span class="hljs-number">300</span>],
+      Colors.blue[<span class="hljs-number">100</span>],
+]),
+</code></pre>
+</li>
+</ul>
 <h3 id="&#x6DFB;&#x52A0;&#x9634;&#x5F71;">&#x6DFB;&#x52A0;&#x9634;&#x5F71;</h3>
 <pre><code class="lang-dart">boxShadow: [
     BoxShadow(
@@ -273,6 +283,50 @@
         spreadRadius: <span class="hljs-number">0</span>
     ),
 ],
+</code></pre>
+<h3 id="&#x6DFB;&#x52A0;&#x80CC;&#x666F;&#x56FE;&#x7247;">&#x6DFB;&#x52A0;&#x80CC;&#x666F;&#x56FE;&#x7247;</h3>
+<pre><code class="lang-dart"><span class="hljs-comment">// &#x7F51;&#x8DEF;&#x94FE;&#x63A5;</span>
+decoration: BoxDecoration(
+  image: DecorationImage(
+    image: NetworkImage(
+      item[<span class="hljs-string">&apos;vertical_src&apos;</span>]
+    ),
+    fit: BoxFit.cover,
+  ),
+),
+
+<span class="hljs-comment">// &#x672C;&#x5730;&#x56FE;&#x7247;</span>
+decoration: BoxDecoration(
+    image: DecorationImage(
+        image: AssetImage(<span class="hljs-string">&apos;images/home/search_icon_xx.png&apos;</span>),
+        fit: BoxFit.cover,
+    )
+),
+
+<span class="hljs-comment">// &#x80CC;&#x666F;&#x56FE;&#x7247;&#x6DFB;&#x52A0;&#x5706;&#x89D2;</span>
+ClipRRect( <span class="hljs-comment">//&#x526A;&#x88C1;&#x4E3A;&#x5706;&#x89D2;&#x77E9;&#x5F62;</span>
+    borderRadius: BorderRadius.circular(<span class="hljs-number">5.0</span>),
+    child: Image.asset(<span class="hljs-string">&quot;imgs/avatar.png&quot;</span>, width: <span class="hljs-number">60.0</span>),
+),
+ClipOval(child: avatar), <span class="hljs-comment">//&#x526A;&#x88C1;&#x4E3A;&#x5706;&#x5F62;</span>
+
+<span class="hljs-comment">// &#x6DE1;&#x51FA;</span>
+FadeInImage.assetNetwork(
+    placeholder: <span class="hljs-string">&apos;local&apos;</span>,
+    image: <span class="hljs-string">&apos;remote&apos;</span>,
+    fit: BoxFit.cover,
+)
+</code></pre>
+<h3 id="&#x6587;&#x5B57;&#x8D85;&#x51FA;&#x4EE5;&#x663E;&#x793A;">&#x6587;&#x5B57;&#x8D85;&#x51FA;&#x4EE5;...&#x663E;&#x793A;</h3>
+<pre><code class="lang-dart">child: Text(
+    <span class="hljs-string">&apos;&#x6839;&#x636E;&#x5176;&#x5546;&#x6807;&#x7533;&#x8BF7;&#xFF0C;&#x201C;Pl&#x89C6;&#x9891;&#x6E38;&#x620F;&#x6D3B;&#x52A8;&#x3001;&#x4F1A;&apos;</span>,
+    overflow: TextOverflow.ellipsis,    <span class="hljs-comment">// &#x4EE5;&#x70B9;&#x70B9;&#x70B9;&#x663E;&#x793A;</span>
+    maxLines: <span class="hljs-number">2</span>,        <span class="hljs-comment">// &#x884C;&#x6570;</span>
+    style: TextStyle(
+        fontSize: <span class="hljs-number">10</span>,
+        color: Color(<span class="hljs-number">0xff222222</span>),
+    ),
+),
 </code></pre>
 
                                 
@@ -306,7 +360,7 @@
                 </a>
                 
                 
-                <a href="../component/first.html" class="navigation navigation-next " aria-label="Next page: 组件">
+                <a href="../component/first.html" class="navigation navigation-next " aria-label="Next page: 常用 Widget">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -317,7 +371,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.基本样式","level":"1.2.1","depth":2,"next":{"title":"组件","level":"1.3","depth":1,"path":"component/first.md","ref":"./component/first.md","articles":[{"title":"ListView","level":"1.3.1","depth":2,"path":"component/listview.md","ref":"./component/listview.md","articles":[]}]},"previous":{"title":"样式布局","level":"1.2","depth":1,"path":"style_layout/index.md","ref":"./style_layout/index.md","articles":[{"title":"1.基本样式","level":"1.2.1","depth":2,"path":"style_layout/base_style.md","ref":"./style_layout/base_style.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"style_layout/base_style.md","mtime":"2021-02-09T03:18:22.245Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-09T03:00:23.387Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基本样式","level":"1.2.1","depth":2,"next":{"title":"常用 Widget","level":"1.3","depth":1,"path":"component/first.md","ref":"./component/first.md","articles":[{"title":"ListView","level":"1.3.1","depth":2,"path":"component/listview.md","ref":"./component/listview.md","articles":[]}]},"previous":{"title":"样式布局","level":"1.2","depth":1,"path":"style_layout/index.md","ref":"./style_layout/index.md","articles":[{"title":"基本样式","level":"1.2.1","depth":2,"path":"style_layout/base_style.md","ref":"./style_layout/base_style.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"style_layout/base_style.md","mtime":"2021-02-24T12:21:09.665Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-10T09:23:47.728Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -325,10 +379,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
